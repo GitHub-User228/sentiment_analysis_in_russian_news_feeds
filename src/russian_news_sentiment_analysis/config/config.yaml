@@ -1,0 +1,34 @@
+general:
+    default_text_col: 'text'
+    default_label_col: 'label'
+path:
+    datasets_params: "/home/jovyan/work/sentiment_analysis_in_russian_news_feeds/src/russian_news_sentiment_analysis/params/datasets.yaml"
+    models_params: "/home/jovyan/work/sentiment_analysis_in_russian_news_feeds/src/russian_news_sentiment_analysis/params/models.yaml"
+    hadoop_files_checklist: "/home/jovyan/work/sentiment_analysis_in_russian_news_feeds/src/logs/hadoop_files.txt"
+    data_to_ingest: "/home/jovyan/work/sentiment_analysis_in_russian_news_feeds/data"
+    raw_data: "hdfs://namenode:9000/data/raw"
+    prepared_data: "hdfs://namenode:9000/data/prepared"
+    tokenised_data: "hdfs://namenode:9000/data/tokenised"
+    predicted_data: "hdfs://namenode:9000/data/predicted"
+    metrics_data: "hdfs://namenode:9000/data/metrics"
+data_ingestion:
+    text_col: 'title'
+    label_col: 'label'
+data_preparation:
+    max_words: 16
+data_tokenisation:
+    tokeniser_parameters:
+        padding: 'max_length'
+        truncation: True
+        max_length: 16
+        return_token_type_ids: False
+label_prediction:
+    device: cuda
+    batch_size: 512
+evaluation:
+    metrics_names:
+        - accuracy
+        - weightedPrecision
+        - weightedRecall
+        - fMeasureByLabel
+        - weightedFMeasure

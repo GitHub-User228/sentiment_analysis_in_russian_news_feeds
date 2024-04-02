@@ -1,0 +1,11 @@
+,russian-news-titles-test,kaggle-competitions-sentiment-analysis-in-russian,kinopoisk,linis-crowd-2015,linis-crowd-2016,ru-tweet-corp,rureviews,rusentiment
+CustomHybridModel,0.9018,0.8396,0.8534,0.6005,0.5976,0.5353,0.6961,0.8228
+r1char9/rubert-base-cased-russian-sentiment,0.699,0.816,0.7361,0.5574,0.5821,0.5754,0.788,0.8339
+sunny3/rubert-conversational-sentiment-balanced,0.665,0.83,0.8289,0.6157,0.6211,0.5762,0.7659,0.8688
+sismetanin/xlm_roberta_large-ru-sentiment-rureviews,0.3844,0.4235,0.5672,0.4946,0.4835,0.5152,0.5179,0.4862
+sismetanin/sbert-ru-sentiment-krnd,0.827,0.8512,0.8121,0.5825,0.5842,0.5938,0.6853,0.8003
+blanchefort/rubert-base-cased-sentiment,0.6524,0.7589,0.7888,0.5937,0.5834,0.6052,0.7545,0.7952
+sismetanin/rubert-ru-sentiment-rusentiment,0.3694,0.1891,0.4055,0.3839,0.4236,0.5725,0.5323,0.3785
+sismetanin/sbert-ru-sentiment-rusentiment,0.3589,0.1886,0.3761,0.385,0.423,0.5697,0.4845,0.3771
+seara/rubert-base-cased-russian-sentiment,0.3285,0.2116,0.4403,0.4247,0.4179,0.4999,0.5054,0.3394
+blanchefort/rubert-base-cased-sentiment-rusentiment,0.6605,0.8246,0.825,0.6104,0.6129,0.5951,0.6963,0.8872

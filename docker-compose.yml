@@ -1,0 +1,60 @@
+version: '3.3'
+
+services:
+
+  namenode:
+    image: bde2020/hadoop-namenode:2.0.0-hadoop3.2.1-java8
+    container_name: namenode
+    restart: always
+    ports:
+      - 9870:9870
+      - 9000:9000
+    volumes:
+      - hadoop_namenode:/hadoop/dfs/name
+    environment:
+      - CLUSTER_NAME=test
+    env_file:
+      - ./env/hadoop.env
+    networks:
+      - hadoop
+
+  datanode:
+    image: bde2020/hadoop-datanode:2.0.0-hadoop3.2.1-java8
+    container_name: datanode
+    restart: always
+    volumes:
+      - hadoop_datanode:/hadoop/dfs/data
+    depends_on:
+      - namenode
+    environment:
+      SERVICE_PRECONDITION: "namenode:9870"
+    env_file:
+      - ./env/hadoop.env
+    networks:
+      - hadoop
+
+  spark-notebook:
+    build: ./spark_notebook
+    ports:
+      - 8888:8888
+      - 4040:4040
+    volumes:
+      - .:/home/jovyan/work/sentiment_analysis_in_russian_news_feeds
+    depends_on:
+      - namenode
+    networks:
+      - hadoop
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
+  
+volumes:
+  hadoop_namenode:
+  hadoop_datanode:
+
+networks:
+  hadoop:

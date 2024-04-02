@@ -1,0 +1,74 @@
+dataset0:
+    filename: 'russian-news-titles-test.csv'
+    text_col: 'text'
+    label_col: 'label'
+    label_converter: 
+    reading_kwargs: {}
+dataset1:
+    filename: 'kaggle-competitions-sentiment-analysis-in-russian.json'
+    text_col: 'text'
+    label_col: 'sentiment'
+    label_converter: 
+        positive: 1
+        neutral: 1
+        negative: 0
+    reading_kwargs: {}
+dataset2:
+    filename: 'kinopoisk.jsonl'
+    text_col: 'content'
+    label_col: 'grade3'
+    label_converter: 
+        Good: 1
+        Neutral: 1
+        Bad: 0
+    reading_kwargs: 
+        lines: True
+dataset3:
+    filename: 'linis-crowd-2015.csv'
+    text_col: 'text'
+    label_col: 'sentiment'
+    label_converter: 
+        -2: 0
+        -1: 0
+        0: 1
+        1: 1
+        2: 1
+    reading_kwargs: {}
+dataset4:
+    filename: 'linis-crowd-2016.csv'
+    text_col: 'text'
+    label_col: 'sentiment'
+    label_converter: 
+        -2: 0
+        -1: 0
+        0: 1
+        1: 1
+        2: 1
+    reading_kwargs: {}
+dataset5:
+    filename: 'ru-tweet-corp.csv'
+    text_col: 'ttext'
+    label_col: 'ttype'
+    label_converter: 
+        -1: 0
+        1: 1
+    reading_kwargs: {}
+dataset6:
+    filename: 'rureviews.csv'
+    text_col: 'review'
+    label_col: 'sentiment'
+    label_converter: 
+        positive: 1
+        neautral: 1
+        negative: 0
+    reading_kwargs:
+        sep: '\t'
+dataset7:
+    filename: 'rusentiment.csv'
+    text_col: 'text'
+    label_col: 'label'
+    label_converter: 
+        positive: 1
+        neutral: 1
+        negative: 0
+    reading_kwargs: {}

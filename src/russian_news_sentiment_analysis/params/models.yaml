@@ -1,0 +1,90 @@
+model0:
+    model_name: 'CustomHybridModel'
+    is_hugging_face_model: False
+    tokeniser_loader_parameters: 
+    prediction_converter: 
+model1:
+    model_name: "r1char9/rubert-base-cased-russian-sentiment"
+    is_hugging_face_model: True
+    tokeniser_loader_parameters:
+        use_fast: False
+    prediction_converter:
+        0: 1
+        1: 1
+        2: 0
+model2:
+    model_name: "sunny3/rubert-conversational-sentiment-balanced"
+    is_hugging_face_model: True
+    tokeniser_loader_parameters:
+        use_fast: False
+    prediction_converter:
+        0: 0
+        1: 1
+        2: 1
+model3:
+    model_name: "sismetanin/xlm_roberta_large-ru-sentiment-rureviews"
+    is_hugging_face_model: True
+    tokeniser_loader_parameters:
+        use_fast: False
+    prediction_converter:
+        0: 0
+        1: 1
+        2: 1
+model4:
+    model_name: 'sismetanin/sbert-ru-sentiment-krnd'
+    is_hugging_face_model: True
+    tokeniser_loader_parameters:
+        use_fast: False
+    prediction_converter:
+        0: 0
+        1: 1
+        2: 1
+model5:
+    model_name: 'blanchefort/rubert-base-cased-sentiment'
+    is_hugging_face_model: True
+    tokeniser_loader_parameters:
+        use_fast: False
+    prediction_converter:
+        0: 1
+        1: 1
+        2: 0
+model6:
+    model_name: 'sismetanin/rubert-ru-sentiment-rusentiment'
+    is_hugging_face_model: True
+    tokeniser_loader_parameters:
+        use_fast: False
+    prediction_converter:
+        0: 0
+        1: 0
+        2: 1
+        3: 1
+        4: 1
+model7:
+    model_name: 'sismetanin/sbert-ru-sentiment-rusentiment'
+    is_hugging_face_model: True
+    tokeniser_loader_parameters:
+        use_fast: False
+    prediction_converter:
+        0: 0
+        1: 0
+        2: 1
+        3: 1
+        4: 1
+model8:
+    model_name: 'seara/rubert-base-cased-russian-sentiment'
+    is_hugging_face_model: True
+    tokeniser_loader_parameters:
+        use_fast: False
+    prediction_converter:
+        0: 0
+        1: 1
+        2: 1
+model9:
+    model_name: 'blanchefort/rubert-base-cased-sentiment-rusentiment'
+    is_hugging_face_model: True
+    tokeniser_loader_parameters:
+        use_fast: False
+    prediction_converter:
+        0: 1
+        1: 1
+        2: 0
